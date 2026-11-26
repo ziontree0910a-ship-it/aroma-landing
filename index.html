@@ -3,15 +3,16 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>진주의 향기살롱 — 박정연(진주쌤) 아로마 강연·클래스</title>
-<meta name="description" content="박정연(진주쌤)의 아로마테라피 강연·클래스. 전열기기·화기 없이 시향과 롤온 블렌딩으로 진행하는 원데이 클래스, 기업 특강, 향기 인문학 과정, 기질·심리 분석 기반 심화 블렌딩 과정과 1:1 맞춤 상담. 서울 전 지역으로 출강합니다." />
+<title>진주쌤의 아로마 향기살롱 — 박정연(진주쌤) 아로마 강연·클래스</title>
+<meta name="description" content="진주쌤의 아로마 향기살롱 · 향기는 사랑입니다. 박정연(진주쌤)의 아로마테라피 강연·클래스로, 전열기기·화기 없이 시향과 롤온 블렌딩으로 진행하는 원데이 클래스, 기관·기업 특강, 향기 인문학 과정, 기질·심리 분석 기반 심화 블렌딩 과정과 1:1 맞춤 클래스. 서울 전 지역으로 출강합니다." />
 <meta name="author" content="박정연" />
 <meta name="theme-color" content="#EEF4F1" />
 <link rel="canonical" href="https://ziontree0910a-ship-it.github.io/aroma-landing/" />
 
 <meta property="og:type" content="website" />
-<meta property="og:title" content="진주의 향기살롱 — 박정연(진주쌤) 아로마 강연·클래스" />
-<meta property="og:description" content="일상에 쉼과 집중을 더하는 아로마테라피 강연·클래스. 원데이 클래스부터 심화 블렌딩 과정, 기업 시그니처 향 컨설팅까지." />
+<meta property="og:site_name" content="진주쌤의 아로마 향기살롱" />
+<meta property="og:title" content="진주쌤의 아로마 향기살롱 — 향기는… 사랑입니다" />
+<meta property="og:description" content="향기로 나를 돌보고, 사랑하는 사람들을 돌봅니다. 원데이 클래스부터 기관·기업 출강, 심화 블렌딩 과정까지 이어지는 아로마테라피 교육 브랜드." />
 <meta property="og:url" content="https://ziontree0910a-ship-it.github.io/aroma-landing/" />
 <meta property="og:image" content="https://ziontree0910a-ship-it.github.io/aroma-landing/profile.jpg" />
 <meta property="og:image:width" content="405" />
@@ -19,6 +20,8 @@
 <meta property="og:image:alt" content="아로마테라피 강사 박정연 프로필 사진" />
 <meta property="og:locale" content="ko_KR" />
 <meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="진주쌤의 아로마 향기살롱 — 향기는… 사랑입니다" />
+<meta name="twitter:description" content="향기로 나를 돌보고, 사랑하는 사람들을 돌봅니다. 원데이 클래스·기관 출강·심화 블렌딩 과정." />
 <meta name="twitter:image" content="https://ziontree0910a-ship-it.github.io/aroma-landing/profile.jpg" />
 <meta name="twitter:image:alt" content="아로마테라피 강사 박정연 프로필 사진" />
 
@@ -141,6 +144,11 @@
   @media (max-width:760px){
     .nav-links{display:none}
     .nav-in{height:58px}
+  }
+  @media (max-width:560px){
+    .brand{font-size:14.5px;gap:7px}
+    .brand span{display:none}
+    .nav-cta{padding:8px 15px;font-size:12.5px}
   }
 
   /* ---------- shared type ---------- */
@@ -288,6 +296,23 @@
   .cert p{margin:0;font-size:13.5px;color:var(--slate);line-height:1.7}
   .cert b{display:block;font-size:14.5px;color:var(--ink);font-weight:600;margin-bottom:4px;letter-spacing:0}
   @media (max-width:880px){.about-grid{grid-template-columns:1fr}}
+
+  /* ---------- values ---------- */
+  .values{
+    margin-top:clamp(36px,5vw,58px);
+    padding-top:clamp(26px,3.4vw,38px);
+    border-top:1px solid var(--line);
+  }
+  .values-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 30px;margin-bottom:clamp(20px,2.8vw,30px)}
+  .values-head .eyebrow{margin:0}
+  .values-head h3{font-size:clamp(18px,2vw,22px);color:var(--slate)}
+  .value-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2.6vw,30px)}
+  .value-list li{border-left:1px solid rgba(43,74,67,.16);padding-left:clamp(14px,1.6vw,20px)}
+  .value-list .n{font-family:var(--serif);font-size:11.5px;letter-spacing:.14em;color:var(--mint-mid)}
+  .value-list b{display:block;font-family:var(--serif);font-size:15.5px;font-weight:500;color:var(--ink);margin:8px 0 6px}
+  .value-list p{margin:0;font-size:13.4px;line-height:1.75;color:var(--ink-soft)}
+  @media (max-width:900px){.value-list{grid-template-columns:repeat(2,1fr);row-gap:26px}}
+  @media (max-width:520px){.value-list{grid-template-columns:1fr;row-gap:22px}}
 
   /* ---------- programs ---------- */
   .programs{
@@ -483,6 +508,7 @@
     box-shadow:var(--shadow-lift);
   }
   .contact-card .who{font-family:var(--serif);font-size:22px;margin-bottom:4px;color:var(--slate)}
+  .contact-card .brand-sub{font-size:12.5px;letter-spacing:.05em;color:var(--mint-deep);margin-bottom:8px}
   .contact-card .role{font-size:12.5px;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
   .contact-card p{font-size:14px;color:var(--ink-soft);margin:18px 0 0}
   .contact-card ul{list-style:none;padding:0;margin:20px 0 0;font-size:14px;color:var(--ink-soft)}
@@ -525,7 +551,7 @@
 
 <header class="nav">
   <div class="wrap nav-in">
-    <a href="#top" class="brand"><b>진주의 향기살롱</b><span>AROMA STUDIO</span></a>
+    <a href="#top" class="brand"><b>진주쌤의 아로마 향기살롱</b><span>JINJU AROMA SALON</span></a>
     <nav class="nav-links" aria-label="주요 섹션">
       <a href="#about">강사 소개</a>
       <a href="#programs">프로그램</a>
@@ -543,11 +569,12 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div class="reveal">
-        <p class="eyebrow">아로마테라피 강연 · 클래스</p>
-        <h1>향기로 쉬어가는 시간,<br />일상에 <em>쉼과 집중</em>을 더합니다</h1>
+        <p class="eyebrow">향기는… 사랑입니다 · 아로마테라피 교육 브랜드</p>
+        <h1>향기로 나를 돌보고,<br />사랑하는 사람들을 <em>돌봅니다</em></h1>
         <p class="lead">
-          전열기기와 화기 없이, 시향과 블렌딩만으로 진행하는 아로마테라피 수업입니다.
-          도서관·기관·기업·소그룹 어디서든 부담 없이 시작할 수 있는 커리큘럼을 제안합니다.
+          전열기기와 화기 없이 시향과 롤온 블렌딩으로 진행하는 아로마테라피 수업입니다.
+          원데이 체험부터 기관·기업 출강, 기질에 맞춘 1:1 클래스까지 —
+          배우고, 직접 만들고, 일상에서 써 보는 시간으로 이어집니다.
         </p>
         <div class="hero-tags">
           <span class="tag">원데이 클래스</span>
@@ -557,8 +584,8 @@
           <span class="tag">1:1 맞춤 상담</span>
         </div>
         <div class="hero-actions">
-          <a href="#programs" class="btn btn-primary">프로그램 살펴보기</a>
-          <a href="#contact" class="btn btn-ghost">강연·출강 문의</a>
+          <a href="#contact" class="btn btn-primary">맞춤 클래스·출강 문의</a>
+          <a href="#programs" class="btn btn-ghost">프로그램 살펴보기</a>
         </div>
       </div>
 
@@ -606,6 +633,12 @@
               출강은 <strong>서울 전 지역</strong>에서 가능합니다.
               서울 강북구 수유동을 거점으로 두고, 인근 수도권 일정은 사전 협의로 조정합니다.
             </p>
+            <p>
+              제가 하고 싶은 일은 향기를 파는 것이 아니라,
+              <strong>향기의 가치를 전하는 것</strong>입니다.
+              수업에서 배운 향기가 각자의 일상에서 자기돌봄으로 이어지고,
+              가족과 이웃에게로 천천히 번져 나가기를 바랍니다.
+            </p>
             <p class="quote">향은 기억을 부르고, 호흡은 몸을 되돌립니다.</p>
           </div>
         </div>
@@ -648,6 +681,35 @@
             </p>
           </div>
         </div>
+      </div>
+
+      <div class="values">
+        <div class="values-head">
+          <p class="eyebrow">Our Values</p>
+          <h3>향기를 배우고, 경험하고, 나누며 성장합니다</h3>
+        </div>
+        <ol class="value-list">
+          <li>
+            <span class="n">01</span>
+            <b>배우는 향기</b>
+            <p>에센셜 오일의 특성과 향기와 몸의 관계, 안전한 사용법을 체계적으로 배웁니다.</p>
+          </li>
+          <li>
+            <span class="n">02</span>
+            <b>경험하는 향기</b>
+            <p>시향하고 롤온을 직접 블렌딩하며, 향기를 손에 익히는 경험을 합니다.</p>
+          </li>
+          <li>
+            <span class="n">03</span>
+            <b>나누는 향기</b>
+            <p>배운 향기를 가족과 이웃, 지역사회의 자기돌봄으로 나눕니다.</p>
+          </li>
+          <li>
+            <span class="n">04</span>
+            <b>성장하는 향기</b>
+            <p>기초와 심화를 거쳐 향기를 설계하고 가르치는 길로 확장합니다.</p>
+          </li>
+        </ol>
       </div>
     </div>
   </section>
@@ -999,7 +1061,7 @@
           <li>
             <a href="https://link.inpock.co.kr/tamhom_nyang" target="_blank" rel="noopener">
               <span class="k">채널</span>
-              <span class="v">진주의 향기살롱 채널 모음<small>블로그 등 다른 채널을 한 번에 볼 수 있습니다</small></span>
+              <span class="v">진주쌤의 아로마 향기살롱 채널 모음<small>블로그 등 다른 채널을 한 번에 볼 수 있습니다</small></span>
             </a>
           </li>
         </ul>
@@ -1007,6 +1069,7 @@
 
       <aside class="contact-card">
         <div class="who">박정연 <span style="font-family:var(--sans);font-size:14px;color:var(--muted)">(진주쌤)</span></div>
+        <div class="brand-sub">진주쌤의 아로마 향기살롱 · JINJU AROMA SALON</div>
         <div class="role">Aromatherapy Instructor</div>
         <p>향기를 매개로 사람과 일상을 돌보는 수업을 만듭니다. 작은 모임부터 기관 강연까지, 규모에 맞춰 준비합니다.</p>
         <ul>
@@ -1045,9 +1108,9 @@
 
 <footer>
   <div class="wrap foot-in">
-    <span class="foot-brand">진주의 향기살롱</span>
+    <span class="foot-brand">진주쌤의 아로마 향기살롱 <span style="font-family:var(--sans);font-size:11px;letter-spacing:.14em;color:rgba(226,238,233,.46)">JINJU AROMA SALON</span></span>
     <span>박정연 (진주쌤) · 아로마테라피 강사 · 서울 전 지역 출강</span>
-    <span>© 2026 진주의 향기살롱</span>
+    <span>© 2026 진주쌤의 아로마 향기살롱</span>
   </div>
 </footer>
 
