@@ -6,7 +6,7 @@
 <title>진주쌤의 아로마 향기살롱 — 박정연 (활동명:진주쌤) 아로마 강연·클래스</title>
 <meta name="description" content="진주쌤의 아로마 향기살롱 · 향기는 사랑입니다. 박정연 (활동명:진주쌤)의 아로마테라피 강연·클래스로, 시향과 롤온 블렌딩으로 진행하는 원데이 클래스, 기관·기업 특강, 향기 인문학 과정, 기질·심리 분석 기반 심화 블렌딩 과정과 1:1 맞춤 클래스. 서울 전 지역으로 출강합니다." />
 <meta name="author" content="박정연" />
-<meta name="theme-color" content="#EEF4F1" />
+<meta name="theme-color" content="#E3F1EC" />
 <link rel="canonical" href="https://ziontree0910a-ship-it.github.io/aroma-landing/" />
 
 <meta property="og:type" content="website" />
@@ -90,7 +90,7 @@
 
   body{
     margin:0;
-    background:linear-gradient(178deg,#F4F9F6 0%,#EBF3EF 44%,#E7F0ED 100%);
+    background:linear-gradient(176deg,#F3FAF6 0%,#E9F5EF 38%,#DDEDE6 72%,#E6F2ED 100%);
     background-attachment:fixed;
     color:var(--ink);
     font-family:var(--sans);
@@ -105,9 +105,9 @@
     position:fixed;inset:0;
     pointer-events:none;z-index:0;
     background:
-      radial-gradient(62% 48% at 90% 0%, rgba(143,177,179,.22), transparent 70%),
-      radial-gradient(56% 44% at 0% 28%, rgba(127,163,150,.16), transparent 72%),
-      radial-gradient(48% 42% at 48% 104%, rgba(201,220,213,.30), transparent 72%);
+      radial-gradient(62% 48% at 90% 0%, rgba(143,177,179,.30), transparent 70%),
+      radial-gradient(56% 44% at 0% 28%, rgba(127,163,150,.22), transparent 72%),
+      radial-gradient(48% 42% at 48% 104%, rgba(169,207,195,.38), transparent 72%);
   }
 
   img{max-width:100%;display:block}
@@ -176,14 +176,22 @@
   /* ---------- hero ---------- */
   .hero{
     padding:clamp(40px,6vw,76px) 0 clamp(56px,8vw,96px);
+    position:relative;
     background:
-      radial-gradient(46% 52% at 78% 40%, rgba(158,193,196,.30) 0%, rgba(158,193,196,0) 66%),
-      radial-gradient(58% 64% at 86% 4%, rgba(143,177,179,.46) 0%, rgba(143,177,179,0) 68%),
-      radial-gradient(54% 60% at 2% 10%, rgba(163,197,183,.46) 0%, rgba(163,197,183,0) 66%),
-      radial-gradient(72% 62% at 52% 110%, rgba(228,240,235,.95) 0%, rgba(228,240,235,0) 72%),
-      linear-gradient(168deg,#F8FBF9 0%,#EDF5F1 34%,#E2EEEA 68%,#E8F1EF 100%);
+      radial-gradient(52% 58% at 87% 12%, rgba(160,203,190,.82) 0%, rgba(160,203,190,0) 60%),
+      radial-gradient(46% 48% at 97% 66%, rgba(140,185,170,.55) 0%, rgba(140,185,170,0) 64%),
+      radial-gradient(58% 54% at -4% 104%, rgba(176,212,200,.78) 0%, rgba(176,212,200,0) 66%),
+      radial-gradient(44% 44% at 16% 0%, rgba(250,253,252,1) 0%, rgba(250,253,252,0) 76%),
+      linear-gradient(150deg,#FCFEFD 0%,#EFF8F3 20%,#DEEFE8 44%,#C9E4DA 68%,#B7D8CC 100%);
     border-bottom:1px solid rgba(30,43,39,.05);
   }
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(32% 38% at 72% 42%, rgba(226,243,236,.72) 0%, rgba(226,243,236,0) 72%),
+      radial-gradient(28% 32% at 6% 62%, rgba(240,249,245,.80) 0%, rgba(240,249,245,0) 78%);
+  }
+  .hero > .wrap{position:relative;z-index:1}
   .hero-grid{display:grid;grid-template-columns:1.12fr .82fr;gap:clamp(28px,5vw,72px);align-items:center}
   .hero-copy{container-type:inline-size}
   .hero-copy > .hero-slogan:first-child{margin-top:0}
@@ -270,39 +278,61 @@
 
   /* ---------- hero botanical accents (아로마 재료) ---------- */
   .hero{overflow:hidden}
+
+  /* 히어로 감성 문구 옆 화사한 아로마 가지 */
   .slogan-text{position:relative;display:inline-block;white-space:nowrap}
   .slogan-sprig{
-    position:absolute;left:calc(100% + 14px);top:-20px;
-    width:clamp(92px,8.6vw,128px);height:auto;
-    pointer-events:none;opacity:.92;
-    transform:rotate(-3deg);transform-origin:0 50%;
+    position:absolute;left:calc(100% + 12px);top:-28px;
+    width:clamp(120px,11.6vw,170px);height:auto;
+    pointer-events:none;
+    transform:rotate(-5deg);transform-origin:10% 55%;
   }
+
   .portrait-stage{position:relative}
   .portrait-inner{position:relative;z-index:2}
   .bot{
     position:absolute;z-index:1;height:auto;display:block;
-    pointer-events:none;opacity:1;
+    pointer-events:none;
   }
-  .bot-euca{width:55%;right:-7%;top:-16%;transform:rotate(18deg)}
-  .bot-lav{width:22%;right:-14%;top:42%;transform:rotate(24deg)}
-  .bot-cham{width:46%;left:-27%;top:61%;transform:rotate(-10deg)}
+  /* 오른쪽 위 → 오른쪽 아래로 이어지는 유칼립투스·로즈마리 아치 */
+  .bot-arc{width:90%;right:-31%;top:-18%;transform:rotate(5deg)}
+  /* 타원 오른쪽 위 라벤더 다발 */
+  .bot-lav{width:40%;right:-19%;top:0;transform:rotate(8deg)}
+  /* 타원 오른쪽 아래 로즈 포인트 */
+  .bot-rose{width:34%;right:-21%;bottom:-4%;transform:rotate(-8deg)}
+  /* 왼쪽 아래 화사한 꽃·허브 묶음 */
+  .bot-cham{width:66%;left:-31%;bottom:-3%;transform:rotate(-4deg)}
+  .bot-oil{width:12%;left:-35%;bottom:-1%;transform:rotate(-9deg)}
   .portrait figcaption{position:relative;z-index:3}
+
   @media (max-width:880px){
-    .hero-grid{gap:56px}
-    .bot-euca{width:50%;right:-3%;top:-8%;transform:rotate(17deg)}
-    .bot-lav{width:22%;right:-3%;top:44%;transform:rotate(12deg)}
-    .bot-cham{width:44%;left:-8%;top:58%;transform:rotate(-13deg)}
+    .hero-grid{gap:60px}
+    .bot-arc{width:82%;right:-20%;top:-13%;transform:rotate(4deg)}
+    .bot-lav{width:34%;right:-11%;top:2%}
+    .bot-rose{width:30%;right:-13%;bottom:-3%}
+    .bot-cham{width:56%;left:-20%;bottom:-2%}
+    .bot-oil{width:11%;left:-24%;bottom:0}
   }
   @media (min-width:641px) and (max-width:880px){
-    .bot-euca{width:46%;right:-7%;top:-2%;transform:rotate(15deg)}
-    .bot-lav{width:20%;right:-6%;top:44%;transform:rotate(14deg)}
-    .bot-cham{width:40%;left:-9%;top:62%;transform:rotate(-11deg)}
+    .bot-arc{width:80%;right:-17%;top:-11%}
+    .bot-lav{width:32%;right:-8%;top:2%}
+    .bot-rose{width:28%;right:-10%;bottom:-2%}
+    .bot-cham{width:52%;left:-14%;bottom:-1%}
+    .bot-oil{width:10.5%;left:-18%;bottom:0}
   }
   @media (max-width:640px){
-    .slogan-sprig{left:calc(100% + 10px);top:-14px;width:74px;transform:rotate(-6deg)}
-    .bot-euca{width:50%;right:-1%;top:-6%;transform:rotate(19deg)}
-    .bot-lav{width:24%;right:-6%;top:40%;transform:rotate(26deg)}
-    .bot-cham{width:48%;left:-12%;top:57%}
+    .slogan-sprig{left:calc(100% + 3px);top:-19px;width:clamp(78px,21vw,108px)}
+    .bot-arc{width:74%;right:-10%;top:-9%}
+    .bot-lav{width:31%;right:-4%;top:3%}
+    .bot-rose{width:26%;right:-5%;bottom:-1%}
+    .bot-cham{width:52%;left:-8%;bottom:-1%}
+    .bot-oil{display:none}
+  }
+  @media (max-width:420px){
+    .bot-arc{width:72%;right:-7%;top:-8%}
+    .bot-lav{width:29%;right:-1%;top:3%}
+    .bot-rose{width:25%;right:-2%;bottom:0}
+    .bot-cham{width:50%;left:-5%;bottom:0}
   }
 
   /* ---------- aroma images ---------- */
@@ -334,9 +364,9 @@
   /* ---------- about ---------- */
   .about{
     background:
-      radial-gradient(54% 48% at 88% 4%, rgba(143,177,179,.20), transparent 66%),
-      radial-gradient(48% 42% at 2% 92%, rgba(201,220,213,.36), transparent 68%),
-      linear-gradient(180deg,rgba(248,252,250,0) 0%,rgba(239,247,243,.93) 20%,rgba(233,243,238,.95) 76%,rgba(233,243,238,0) 100%);
+      radial-gradient(50% 46% at 94% 2%, rgba(151,196,182,.42), transparent 64%),
+      radial-gradient(46% 42% at 0% 98%, rgba(184,217,206,.60), transparent 66%),
+      linear-gradient(180deg,rgba(250,253,251,0) 0%,rgba(233,244,239,.96) 18%,rgba(220,236,229,.97) 74%,rgba(220,236,229,0) 100%);
   }
   .about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:clamp(30px,5vw,64px);align-items:start}
   .about-body p{margin:0 0 18px;color:var(--ink-soft)}
@@ -428,9 +458,9 @@
   .advanced::before{
     content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
     background:
-      radial-gradient(58% 52% at 100% 6%, rgba(201,220,213,.58), transparent 62%),
-      radial-gradient(50% 46% at 0% 88%, rgba(178,192,187,.34), transparent 64%),
-      linear-gradient(180deg,#F5FAF7 0%,#EDF4F1 40%,#E9F0ED 78%,#ECF3F0 100%);
+      radial-gradient(54% 50% at 102% 4%, rgba(184,217,206,.92), transparent 62%),
+      radial-gradient(46% 44% at 0% 92%, rgba(166,203,190,.62), transparent 64%),
+      linear-gradient(180deg,#F8FDFB 0%,#E9F5F0 38%,#DFEEE8 76%,#E7F3EE 100%);
     -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,0) 0,#000 88px,#000 calc(100% - 88px),rgba(0,0,0,0) 100%);
     mask-image:linear-gradient(180deg,rgba(0,0,0,0) 0,#000 88px,#000 calc(100% - 88px),rgba(0,0,0,0) 100%);
   }
@@ -642,7 +672,7 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div class="reveal hero-copy">
-        <p class="hero-slogan"><span class="slogan-text">향기는, 사랑입니다<img class="slogan-sprig" src="assets/botanicals/hero-sprig-small.png" width="420" height="135" alt="" aria-hidden="true" /></span></p>
+        <p class="hero-slogan"><span class="slogan-text">향기는, 사랑입니다<img class="slogan-sprig" src="assets/botanicals/hero-slogan-mix.webp" width="820" height="401" alt="" aria-hidden="true" /></span></p>
         <h1>향기로 나를 돌보고<br />사랑하는 사람들을 <em>돌봅니다</em></h1>
         <p class="lead">
           ‘진주쌤의 아로마 향기살롱’은 에센셜 오일의 전통적인 지혜와 현대 아로마테라피 지식을 바탕으로
@@ -663,9 +693,11 @@
 
       <figure class="portrait reveal" style="animation-delay:.12s">
         <div class="portrait-stage">
-          <img class="bot bot-euca" src="assets/botanicals/hero-eucalyptus.png" width="253" height="620" alt="" aria-hidden="true" />
-          <img class="bot bot-lav" src="assets/botanicals/hero-lavender.png" width="174" height="560" alt="" aria-hidden="true" />
-          <img class="bot bot-cham" src="assets/botanicals/hero-chamomile-cluster.png" width="303" height="263" alt="" aria-hidden="true" />
+          <img class="bot bot-arc" src="assets/botanicals/hero-eucalyptus-arc.webp" width="552" height="820" alt="" aria-hidden="true" />
+          <img class="bot bot-lav" src="assets/botanicals/hero-lavender-bunch.webp" width="401" height="820" alt="" aria-hidden="true" />
+          <img class="bot bot-rose" src="assets/botanicals/hero-rose-bloom.webp" width="753" height="820" alt="" aria-hidden="true" />
+          <img class="bot bot-cham" src="assets/botanicals/hero-chamomile-bloom.webp" width="820" height="544" alt="" aria-hidden="true" />
+          <img class="bot bot-oil" src="assets/botanicals/hero-oil-accent.webp" width="591" height="820" alt="" aria-hidden="true" />
           <div class="portrait-inner">
             <div class="frame">
               <img src="profile.jpg" width="405" height="463" alt="아로마테라피 강사 박정연 프로필 사진" />
