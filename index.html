@@ -163,17 +163,20 @@
   .portrait-inner{position:relative;isolation:isolate}
   .portrait-inner::before{
     content:"";position:absolute;z-index:-1;
-    right:-14px;bottom:-4px;width:64%;height:58%;
-    border:1px solid rgba(88,106,76,.35);
+    inset:18px -14px -14px 18px;border-radius:50%;
+    border:1px solid rgba(88,106,76,.26);
   }
   .portrait-inner::after{
     content:"";position:absolute;z-index:-2;
-    left:-20px;top:-20px;width:56%;height:44%;
+    inset:-16px 18px 16px -18px;border-radius:50%;
     background:var(--sage-pale);
   }
-  .portrait .frame{overflow:hidden;background:#E7E3D8;box-shadow:var(--shadow)}
+  .portrait .frame{
+    overflow:hidden;background:#E7E3D8;box-shadow:var(--shadow);
+    border-radius:50%;aspect-ratio:4/5;
+  }
   .portrait img{
-    width:100%;aspect-ratio:4/5;
+    width:100%;height:100%;display:block;
     object-fit:cover;object-position:top center;
   }
   .portrait figcaption{
@@ -183,7 +186,31 @@
   @media (max-width:880px){
     .hero-grid{grid-template-columns:1fr;gap:44px}
     .portrait{max-width:420px}
-    .portrait-inner::before{right:-10px;bottom:-4px}
+    .portrait-inner::before{inset:12px -10px -10px 12px}
+  }
+
+  /* ---------- aroma images ---------- */
+  .aroma-gallery{padding:0 0 clamp(48px,7vw,84px)}
+  .aroma-gallery-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(14px,2.2vw,26px);align-items:start}
+  .aroma-gallery figure{margin:0}
+  .aroma-gallery img{
+    width:100%;aspect-ratio:4/3;object-fit:cover;object-position:center;display:block;
+    border-radius:18px;background:#E7E3D8;box-shadow:var(--shadow);
+  }
+  .aroma-gallery figcaption{
+    margin-top:12px;font-size:12px;letter-spacing:.1em;color:var(--muted);
+  }
+  .aroma-wide{padding:0 0 clamp(20px,4vw,44px)}
+  .aroma-wide figure{margin:0}
+  .aroma-wide img{
+    width:100%;height:clamp(200px,30vw,380px);object-fit:cover;object-position:center;display:block;
+    border-radius:20px;box-shadow:var(--shadow);background:#E7E3D8;
+  }
+  .aroma-wide figcaption{margin-top:12px;font-size:12px;letter-spacing:.1em;color:var(--muted)}
+  @media (max-width:720px){
+    .aroma-gallery-grid{grid-template-columns:1fr}
+    .aroma-gallery img{aspect-ratio:16/10}
+    .aroma-wide img{height:clamp(170px,48vw,280px)}
   }
 
   /* ---------- about ---------- */
@@ -519,6 +546,22 @@
     </div>
   </section>
 
+  <!-- AROMA GALLERY -->
+  <section class="aroma-gallery" aria-label="아로마 재료와 도구">
+    <div class="wrap">
+      <div class="aroma-gallery-grid">
+        <figure class="reveal">
+          <img src="botanical-herbs.jpg" width="1122" height="1402" loading="lazy" alt="라벤더·로즈마리·캐모마일·유칼립투스와 장미꽃잎을 린넨 위에 가지런히 놓은 아로마 재료 사진" />
+          <figcaption>라벤더 · 로즈마리 · 캐모마일 · 유칼립투스</figcaption>
+        </figure>
+        <figure class="reveal" style="animation-delay:.08s">
+          <img src="aroma-tools.jpg" width="1536" height="1024" loading="lazy" alt="갈색 유리 에센셜 오일 드로퍼 병과 롤온 병, 시향지, 스포이드, 우드 트레이를 담은 조향 도구 사진" />
+          <figcaption>에센셜 오일 · 롤온 병 · 시향지 · 우드 트레이</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
   <!-- PROGRAMS -->
   <section class="section programs" id="programs">
     <div class="wrap">
@@ -687,6 +730,16 @@
         </div>
       </div>
       <p class="ladder-note">각 단계는 독립적으로 수강할 수 있고, 기관의 목적과 일정에 맞춰 조합해 제안합니다.</p>
+    </div>
+  </section>
+
+  <!-- AROMA WIDE -->
+  <section class="aroma-wide" aria-label="블렌딩">
+    <div class="wrap">
+      <figure class="reveal">
+        <img src="blending-hands.jpg" width="1402" height="1122" loading="lazy" alt="유리 스포이드로 롤온 병에 에센셜 오일을 한 방울씩 담는 손 사진" />
+        <figcaption>원하는 향을 롤온에 한 방울씩 담아갑니다</figcaption>
+      </figure>
     </div>
   </section>
 
