@@ -159,13 +159,14 @@
   .btn-ghost{border:1px solid var(--line);color:var(--ink)}
   .btn-ghost:hover{border-color:var(--sage);color:var(--sage-deep);transform:translateY(-2px)}
 
-  .portrait{position:relative;isolation:isolate}
-  .portrait::before{
+  .portrait{position:relative}
+  .portrait-inner{position:relative;isolation:isolate}
+  .portrait-inner::before{
     content:"";position:absolute;z-index:-1;
     right:-14px;bottom:-14px;width:64%;height:58%;
     border:1px solid rgba(88,106,76,.35);
   }
-  .portrait::after{
+  .portrait-inner::after{
     content:"";position:absolute;z-index:-2;
     left:-20px;top:-20px;width:56%;height:44%;
     background:var(--sage-pale);
@@ -182,7 +183,7 @@
   @media (max-width:880px){
     .hero-grid{grid-template-columns:1fr;gap:44px}
     .portrait{max-width:420px}
-    .portrait::before{right:-10px;bottom:-10px}
+    .portrait-inner::before{right:-10px;bottom:-10px}
   }
 
   /* ---------- about ---------- */
@@ -414,8 +415,10 @@
       </div>
 
       <figure class="portrait reveal" style="animation-delay:.12s">
-        <div class="frame">
-          <img src="profile.jpg" width="405" height="463" alt="아로마테라피 강사 박정연 프로필 사진" />
+        <div class="portrait-inner">
+          <div class="frame">
+            <img src="profile.jpg" width="405" height="463" alt="아로마테라피 강사 박정연 프로필 사진" />
+          </div>
         </div>
         <figcaption>
           <span>박정연 · 진주쌤</span>
