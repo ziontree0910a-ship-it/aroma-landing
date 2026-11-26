@@ -320,11 +320,17 @@
 
   /* ---------- advanced ---------- */
   .advanced{
-    background:
-      radial-gradient(58% 52% at 100% 0%, rgba(201,220,213,.58), transparent 62%),
-      radial-gradient(50% 46% at 0% 100%, rgba(178,192,187,.34), transparent 64%),
-      linear-gradient(180deg,#F5FAF7 0%,#EDF4F1 40%,#E7EEEB 78%,#EAF1EF 100%);
+    background:none;
     border-top:1px solid rgba(30,43,39,.07);border-bottom:1px solid rgba(30,43,39,.07);
+  }
+  .advanced::before{
+    content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+    background:
+      radial-gradient(58% 52% at 100% 6%, rgba(201,220,213,.58), transparent 62%),
+      radial-gradient(50% 46% at 0% 88%, rgba(178,192,187,.34), transparent 64%),
+      linear-gradient(180deg,#F5FAF7 0%,#EDF4F1 40%,#E9F0ED 78%,#ECF3F0 100%);
+    -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,0) 0,#000 88px,#000 calc(100% - 88px),rgba(0,0,0,0) 100%);
+    mask-image:linear-gradient(180deg,rgba(0,0,0,0) 0,#000 88px,#000 calc(100% - 88px),rgba(0,0,0,0) 100%);
   }
   .adv-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,2.4vw,24px)}
   .adv-card{
@@ -381,11 +387,15 @@
   }
 
   /* ---------- principles ---------- */
-  .principles{
+  .principles{background:none}
+  .principles::before{
+    content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
     background:
-      radial-gradient(72% 64% at 84% 4%, rgba(166,198,189,.62), transparent 62%),
-      radial-gradient(58% 54% at 2% 94%, rgba(143,177,179,.30), transparent 64%),
-      linear-gradient(180deg,rgba(235,243,239,0) 0%,rgba(226,240,233,.94) 10%,rgba(230,242,236,.97) 46%,rgba(222,237,230,.95) 86%,rgba(235,243,239,0) 100%);
+      radial-gradient(72% 64% at 84% 8%, rgba(166,198,189,.62), transparent 62%),
+      radial-gradient(58% 54% at 2% 88%, rgba(143,177,179,.30), transparent 64%),
+      linear-gradient(180deg,#E8F2EC 0%,#E6F1EA 46%,#E2EEE7 100%);
+    -webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,0) 0,#000 96px,#000 calc(100% - 96px),rgba(0,0,0,0) 100%);
+    mask-image:linear-gradient(180deg,rgba(0,0,0,0) 0,#000 96px,#000 calc(100% - 96px),rgba(0,0,0,0) 100%);
   }
   .principles .eyebrow{color:var(--mint-deep)}
   .p-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2.6vw,30px)}
@@ -408,7 +418,7 @@
     background:
       radial-gradient(58% 50% at 92% 6%, rgba(143,177,179,.18), transparent 64%),
       radial-gradient(46% 44% at 0% 100%, rgba(201,220,213,.28), transparent 66%),
-      linear-gradient(180deg,rgba(248,253,250,.55) 0%,rgba(243,250,246,.92) 26%,rgba(238,247,243,.95) 72%,rgba(240,248,245,.62) 100%);
+      linear-gradient(180deg,rgba(248,253,250,0) 0%,rgba(243,250,246,.92) 14%,rgba(238,247,243,.95) 72%,rgba(240,248,245,.62) 100%);
   }
   .faq-list{border-top:1px solid var(--line);max-width:860px}
   details{border-bottom:1px solid var(--line)}
