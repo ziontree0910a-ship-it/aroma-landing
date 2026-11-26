@@ -163,7 +163,7 @@
   .portrait-inner{position:relative;isolation:isolate}
   .portrait-inner::before{
     content:"";position:absolute;z-index:-1;
-    right:-14px;bottom:-14px;width:64%;height:58%;
+    right:-14px;bottom:-4px;width:64%;height:58%;
     border:1px solid rgba(88,106,76,.35);
   }
   .portrait-inner::after{
@@ -177,13 +177,13 @@
     object-fit:cover;object-position:top center;
   }
   .portrait figcaption{
-    margin-top:16px;font-size:12px;letter-spacing:.14em;color:var(--muted);
+    margin-top:20px;font-size:12px;letter-spacing:.14em;color:var(--muted);
     display:flex;justify-content:space-between;gap:12px;
   }
   @media (max-width:880px){
     .hero-grid{grid-template-columns:1fr;gap:44px}
     .portrait{max-width:420px}
-    .portrait-inner::before{right:-10px;bottom:-10px}
+    .portrait-inner::before{right:-10px;bottom:-4px}
   }
 
   /* ---------- about ---------- */
